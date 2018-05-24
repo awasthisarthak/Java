@@ -20,12 +20,12 @@ class BinaryToDecimal
     int n,k,d,s=0,c=0;
     System.out.print("Binary number: ");
     n=sc.nextInt();
-    k=n;
+    k=n;		//temporary variable k
     while(k!=0)
     {
-      d=k%10;
-      s+=d*(int)Math.pow(2,c++);
-      k/=10;
+      d=k%10;		 		//singles out a number according to its position from right
+      s+=d*(int)Math.pow(2,c++);        //adding weights according to its position
+      k/=10;				//preparing the binary number for next iteration
     }
     System.out.println("Decimal equivalent:"+s);
     sc.close();
